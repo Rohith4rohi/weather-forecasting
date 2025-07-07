@@ -1,0 +1,135 @@
+/* Floating Chatbot Icon and Chat Window Styles */
+#weather-chatbot-icon {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background: #0078ff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+#weather-chatbot-icon:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+#weather-chatbot-icon img {
+  width: 36px;
+  height: 36px;
+}
+#weather-chatbot-window {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  width: 340px;
+  max-width: 95vw;
+  height: 480px;
+  max-height: 80vh;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.30);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: opacity 0.2s;
+}
+#weather-chatbot-header {
+  background: linear-gradient(90deg, #0078ff 60%, #00c6fb 100%);
+  color: #fff;
+  padding: 14px 18px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#weather-chatbot-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+#weather-chatbot-messages {
+  flex: 1;
+  padding: 18px 12px 12px 12px;
+  overflow-y: auto;
+  background: #f6f9fc;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.weather-chatbot-msg {
+  max-width: 80%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-break: break-word;
+  margin-bottom: 2px;
+}
+.weather-chatbot-msg.user {
+  background: #e3f0ff;
+  align-self: flex-end;
+  color: #0078ff;
+}
+.weather-chatbot-msg.bot {
+  background: #fff;
+  border: 1px solid #e0e7ef;
+  align-self: flex-start;
+  color: #222;
+}
+#weather-chatbot-input-row {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #e0e7ef;
+  background: #fafdff;
+}
+#weather-chatbot-input {
+  flex: 1;
+  border: 1px solid #c3d2e6;
+  border-radius: 14px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  outline: none;
+  margin-right: 8px;
+}
+#weather-chatbot-send {
+  background: #0078ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#weather-chatbot-send:hover {
+  background: #005fcc;
+}
+@media (max-width: 600px) {
+  #weather-chatbot-window {
+    width: 98vw;
+    right: 1vw;
+    bottom: 90px;
+    height: 70vh;
+    max-height: 80vh;
+    border-radius: 10px;
+  }
+  #weather-chatbot-icon {
+    width: 52px;
+    height: 52px;
+  }
+}
